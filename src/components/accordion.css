@@ -1,6 +1,6 @@
 .accordion {
   width: 700px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 .item {
   display: grid;

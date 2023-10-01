@@ -1,14 +1,7 @@
-import { useState } from "react";
 import "./accordion.css";
-const Accordion = ({ id, question, answer }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toggleAccordion = () => {
-    setIsVisible(!isVisible);
-  };
-
+const Accordion = ({ id, question, answer, isActive, toggleAccordion }) => {
   return (
-    <div className='accordion' onClick={toggleAccordion}>
+    <div className='accordion' onClick={() => toggleAccordion(id)}>
       <div className='item'>
         <p className='number'>{id}</p>
         <p className='text'>{question}</p>
@@ -18,7 +11,7 @@ const Accordion = ({ id, question, answer }) => {
           viewBox='0 0 24 24'
           strokeWidth={1.5}
           stroke='currentColor'
-          className={`icon ${isVisible ? "rotate" : ""}`}
+          className={`icon ${isActive ? "rotate" : ""}`}
         >
           <path
             strokeLinecap='round'
@@ -26,7 +19,7 @@ const Accordion = ({ id, question, answer }) => {
             d='M8.25 4.5l7.5 7.5-7.5 7.5'
           />
         </svg>
-        <div className={`hidden-box ${isVisible ? "active-box" : ""}`}>
+        <div className={`hidden-box ${isActive ? "active-box" : ""}`}>
           <p>{answer}</p>
         </div>
       </div>
