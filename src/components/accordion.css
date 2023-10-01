@@ -1,0 +1,50 @@
+.accordion {
+  width: 700px;
+  margin: 0 auto;
+}
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  border-top: 4px solid #228be6;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  border-radius: 15px 0 0 0;
+  align-items: center;
+  padding: 24px 24px 0 24px;
+}
+.number,
+.text {
+  color: #228be6;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #228be6;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.hidden-box {
+  grid-column: 2;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.hidden-box p {
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.active-box {
+  max-height: 245px;
+  margin-bottom: 24px;
+  transition: max-height 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
