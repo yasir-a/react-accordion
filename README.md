@@ -1,3 +1,3 @@
-# Accordion Component in React js
+# Accordion Component in ReactJs
 
 ## Preview: https://bit.ly/46c50r4
