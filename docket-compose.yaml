@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  website:
+    build: .
+    container_name: ReactTutorial
+    ports:
+      - '4173:4173'
+    stdin_open: true
+    tty: true
